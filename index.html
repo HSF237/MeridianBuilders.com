@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meridian Builders & Architectural Designers</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #1e293b;
+      --accent: #38bdf8;
+      --bg: #f1f5f9;
+      --text: #e2e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: var(--primary);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 15px;
+      font-size: 1.1rem;
+      color: var(--secondary);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    /* 🔧 WhatsApp Button Styling */
+    .whatsapp-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #20c05e;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+
+      .whatsapp-button {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔧 WhatsApp Button -->
+  <a
+    href="https://wa.me/919895876084?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+    class="whatsapp-button"
+    target="_blank"
+  >
+    📞 Contact Us
+  </a>
+
+  <header>
+    <h1>Meridian Builders & Architectural Designers</h1>
+    <p>Building Tomorrow with Innovation and Integrity</p>
+  </header>
+
+  <nav>
+    <a href="#ongoing">Ongoing Plans</a>
+    <a href="#plots">Plot for Sale</a>
+    <a href="#completed">Completed Works</a>
+  </nav>
+
+  <section id="ongoing">
+    <h2>Ongoing Plans</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?construction,building" alt="Ongoing Project 1">
+        <h3>Skyline Tower Project – Calicut</h3>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?construction,apartment" alt="Ongoing Project 2">
+        <h3>Modern Villas – Kannur</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="plots">
+    <h2>Plot for Sale</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?land,plot" alt="Plot 1">
+        <h3>Prime 5-Cent Plot – Thalassery</h3>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?realestate,land" alt="Plot 2">
+        <h3>8-Cent Residential Plot – Mahe</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="completed">
+    <h2>Completed Works</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?villa,architecture" alt="Completed Work 1">
+        <h3>Luxury Villa – Kannur</h3>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?modern,home" alt="Completed Work 2">
+        <h3>Commercial Complex – Kozhikode</h3>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?interior,design" alt="Completed Work 3">
+        <h3>Elegant Interior – Payyannur Apartment</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Meridian Builders & Architectural Designers. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

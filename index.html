@@ -310,6 +310,37 @@ section:nth-child(odd) .image-card img {
   display: none;
 }
 
+.image-gallery.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.image-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Optional: Hide scrollbar on WebKit */
+.image-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
     }
   </style>
 </head>
@@ -341,7 +372,7 @@ section:nth-child(odd) .image-card img {
   <p style="margin-top: 10px; font-size: 1.1em;">Build your dream space for tomorrow...</p>
 </header>
 
-<section id="about-us" style="padding: 20px; text-align:center; background-color: #e2e2e2;">
+<section id="about-us" style="padding: 20px; background-color: #e2e2e2;">
   <h2 style="font-size: 2em; text-align: center; color: #333;">About Us</h2>
   <p style="font-size: 1.2em; color: #555; text-align: center;"><div>
     <p style="margin-top: 20px; max-width: 700px; font-size: 1rem; color: #000000;">
@@ -363,107 +394,36 @@ section:nth-child(odd) .image-card img {
 
 
 
-<!-- Image Gallery Section -->
-<!-- Ongoing Plans Section -->
-<section id="ongoing">
-  <h2>completed works</h2>
-  <div class="image-gallery horizontal-scroll">
-    <div class="image-card">
-      <a href="#ongoing-modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
-    </div>
-    <div class="image-card">
-      <a href="#ongoing-modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
-    </div>
-    <div class="image-card">
-      <a href="#ongoing-modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Modal 1 -->
-<div id="modal1" class="modal">
-    <a href="#" class="close-btn">❌</a>
-    <img src="house1.jpg" alt="Ongoing Project 1" />
-  </div>
-  
-  <!-- Modal 2 -->
-  <div id="modal2" class="modal">
-    <a href="#" class="close-btn">❌</a>
-    <img src="house1.jpg" alt="Ongoing Project 2" />
-  </div>
-  
-  <!-- Modal 3 -->
-  <div id="modal3" class="modal">
-    <a href="#" class="close-btn">❌</a>
-    <img src="house1.jpg" alt="Ongoing Project 3" />
-  </div>
-  
-
-<!-- Ongoing Plans Section -->
-<section id="ongoing">
-  <h2>completed works</h2>
-  <div class="image-gallery horizontal-scroll">
-    <div class="image-card">
-      <a href="#ongoing-modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
-    </div>
-    <div class="image-card">
-      <a href="#ongoing-modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
-    </div>
-    <div class="image-card">
-      <a href="#ongoing-modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Modal 1 -->
-<div id="modal1" class="modal">
-    <a href="house1.jpg" class="close-btn">❌</a>
-    <img src="house1.jpg" alt="Ongoing Project 1" />
-  </div>
-  
-  <!-- Modal 2 -->
-  <div id="modal2" class="modal">
-    <a href="house2.jpg" class="close-btn">❌</a>
-    <img src="house2.jpg" alt="Ongoing Project 2" />
-  </div>
-  
-  <!-- Modal 3 -->
-  <div id="modal3" class="modal">
-    <a href="house3.jpg" class="close-btn">❌</a>
-    <img src="house3.jpg" alt="Ongoing Project 3" />
-  </div>
-  
-<!-- Ongoing Plans Section -->
+<!-- Ongoing Plans -->
 <section id="ongoing">
   <h2>Ongoing Plans</h2>
   <div class="image-gallery horizontal-scroll">
-    <div class="image-card">
-      <a href="#ongoing-modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
-    </div>
-    <div class="image-card">
-      <a href="#ongoing-modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
-    </div>
-    <div class="image-card">
-      <a href="#ongoing-modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
-    </div>
+    <div class="image-card"><a href="#modal1"><img src="house1.jpg" alt="Project 1"></a></div>
+    <div class="image-card"><a href="#modal2"><img src="house1.jpg" alt="Project 2"></a></div>
+    <div class="image-card"><a href="#modal3"><img src="house1.jpg" alt="Project 3"></a></div>
   </div>
 </section>
 
+<!-- Completed Works -->
+<section id="completed">
+  <h2>Completed Works</h2>
+  <div class="image-gallery horizontal-scroll">
+    <div class="image-card"><a href="#modal4"><img src="house1.jpg" alt="Completed 1"></a></div>
+    <div class="image-card"><a href="#modal5"><img src="house2.jpg" alt="Completed 2"></a></div>
+    <div class="image-card"><a href="#modal6"><img src="house3.jpg" alt="Completed 3"></a></div>
+  </div>
+</section>
 
-<!-- Modal 1 -->
-<div id="modal1" class="modal">
-  <a href="#"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
-</div>
-<!-- Modal 2 -->
-<div id="modal2" class="modal">
-  <a href="#"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
-</div>
-<!-- Modal 3 -->
-<div id="modal3" class="modal">
-  <a href="#"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
-</div>
+<!-- Plot for Sale -->
+<section id="plots">
+  <h2>Plot for Sale</h2>
+  <div class="image-gallery horizontal-scroll">
+    <div class="image-card"><a href="#modal7"><img src="house1.jpg" alt="Plot 1"></a></div>
+    <div class="image-card"><a href="#modal8"><img src="house1.jpg" alt="Plot 2"></a></div>
+    <div class="image-card"><a href="#modal9"><img src="house1.jpg" alt="Plot 3"></a></div>
+  </div>
+</section>
+
 <title>Contact Us Section</title>
 <style>
   /* Contact Us Section */

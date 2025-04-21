@@ -227,6 +227,60 @@
 .modal .close-btn:hover {
   background-color: #e2e8f0;
 }
+section {
+  padding: 60px 20px;
+}
+
+section:nth-child(even) {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+section:nth-child(odd) {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  position: relative;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+section:nth-child(odd) .image-card {
+  background-color: #1e293b;
+}
+
+section:nth-child(odd) .image-card img {
+  filter: brightness(90%);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+}
+
+.image-card:hover {
+  transform: translateY(-8px);
+}
+
 
     }
   </style>
@@ -255,35 +309,54 @@
       <span class="meridian">Meridian<sup>®</sup></span><br />
       <span class="studio">Arch Studio</span>
     </h1>
-    
   </div>
   <p style="margin-top: 10px; font-size: 1.1em;">Build your dream space for tomorrow...</p>
 </header>
 
+<section id="about-us" style="padding: 20px; background-color: #e2e2e2;">
+  <h2 style="font-size: 2em; text-align: center; color: #333;">About Us</h2>
+  <p style="font-size: 1.2em; color: #555; text-align: center;"><div>
+    <p style="margin-top: 20px; max-width: 700px; font-size: 1rem; color: #000000;">
+      <strong>Meridian Builders Payyannur</strong> is a leading architectural and construction firm based in Payyannur, Kerala. Renowned for our innovative designs and quality craftsmanship, we specialize in creating modern homes, commercial spaces, and personalized building solutions. With a commitment to excellence and customer satisfaction, we transform your dream spaces into lasting realities.
+    </p>
+</section>
+
+<section id="services" style="padding: 20px; background-color: #f9f9f9;">
+  <h2 style="font-size: 2em; text-align: center; color: #333;">Our Services</h2>
+  <ul style="font-size: 1.2em; color: #555; list-style-type: none; padding: 0; text-align: center;">
+    <li>Architectural Design</li>
+    <li>Residential Construction</li>
+    <li>Commercial Construction</li>
+    <li>Renovation and Restoration</li>
+    <li>Plot Development</li>
+  </ul>
+</section>
 
 
 
 
 <!-- Image Gallery Section -->
+<!-- Ongoing Plans Section -->
 <section id="ongoing">
-  <h2>Ongoing Plans</h2>
-  <div class="image-gallery">
+  <h2>completed works</h2>
+  <div class="image-gallery horizontal-scroll">
     <div class="image-card">
-      <a href="#modal1"><img src="003.skp" alt="Ongoing Project 1" /></a>
+      <a href="#ongoing-modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
     </div>
     <div class="image-card">
-      <a href="#modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
+      <a href="#ongoing-modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
     </div>
     <div class="image-card">
-      <a href="#modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
+      <a href="#ongoing-modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
     </div>
   </div>
 </section>
 
+
 <!-- Modal 1 -->
 <div id="modal1" class="modal">
     <a href="#" class="close-btn">❌</a>
-    <img src="003.skp" alt="Ongoing Project 1" />
+    <img src="house1.jpg" alt="Ongoing Project 1" />
   </div>
   
   <!-- Modal 2 -->
@@ -299,20 +372,22 @@
   </div>
   
 
+<!-- Ongoing Plans Section -->
 <section id="ongoing">
   <h2>completed works</h2>
-  <div class="image-gallery">
+  <div class="image-gallery horizontal-scroll">
     <div class="image-card">
-      <a href="house1.jpg"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
+      <a href="#ongoing-modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
     </div>
     <div class="image-card">
-      <a href="house2.jpg"><img src="house2.jpg" alt="Ongoing Project 2" /></a>
+      <a href="#ongoing-modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
     </div>
     <div class="image-card">
-      <a href="house3.jpg"><img src="house3.jpg" alt="Ongoing Project 3" /></a>
+      <a href="#ongoing-modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
     </div>
   </div>
 </section>
+
 
 <!-- Modal 1 -->
 <div id="modal1" class="modal">
@@ -332,24 +407,26 @@
     <img src="house3.jpg" alt="Ongoing Project 3" />
   </div>
   
+<!-- Ongoing Plans Section -->
 <section id="ongoing">
-  <h2>plot for sale</h2>
-  <div class="image-gallery">
+  <h2>Ongoing Plans</h2>
+  <div class="image-gallery horizontal-scroll">
     <div class="image-card">
-      <a href="#modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
+      <a href="#ongoing-modal1"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
     </div>
     <div class="image-card">
-      <a href="#modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
+      <a href="#ongoing-modal2"><img src="house1.jpg" alt="Ongoing Project 2" /></a>
     </div>
     <div class="image-card">
-      <a href="#modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
+      <a href="#ongoing-modal3"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
     </div>
   </div>
 </section>
 
+
 <!-- Modal 1 -->
 <div id="modal1" class="modal">
-  <a href="#"><img src="003.skp" alt="Ongoing Project 1" /></a>
+  <a href="#"><img src="house1.jpg" alt="Ongoing Project 1" /></a>
 </div>
 <!-- Modal 2 -->
 <div id="modal2" class="modal">
@@ -359,6 +436,175 @@
 <div id="modal3" class="modal">
   <a href="#"><img src="house1.jpg" alt="Ongoing Project 3" /></a>
 </div>
+<title>Contact Us Section</title>
+<style>
+  /* Contact Us Section */
+  #contact-form {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+
+  #contact-form h2 {
+    font-size: 2em;
+    color: #333;
+  }
+
+  #contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  #contact-form label {
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+
+  #contact-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+  }
+
+  /* Contact Us Button */
+  #contact-us-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    display: block; /* Initially show button */
+  }
+
+  #contact-us-btn:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<body>
+
+
+
+<!-- Contact Us Section -->
+<section id="contact-form">
+  <h2>Contact Us</h2>
+  <form id="contact-form" method="GET" target="_blank" onsubmit="sendToWhatsApp(event)">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script>
+  // JavaScript function to handle form submission and redirect to WhatsApp
+  function sendToWhatsApp(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get the form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Predefined phone number (Replace with the phone number you want the message to go to)
+    const phoneNumber = "9400118786";  // Example: "+11234567890"
+
+    // Construct the message text
+    const textMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+    // Redirect to WhatsApp with the pre-filled message
+    window.location.href = `https://wa.me/${9400118786}?text=${textMessage}`;
+  }
+</script>
+
+<style>
+  /* Inline CSS */
+  #contact-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #contact-form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  #contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  #contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #contact-form button:hover {
+    background-color: #128C7E;
+  }
+</style>
+
+
+<section style="padding: 40px 20px; background-color: #e2e8f0;">
+  <h2 style="text-align: center; color: #0f172a; margin-bottom: 30px;">Frequently Asked Questions</h2>
+  <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: #1e293b;">
+    <p><strong>Q: Where is Meridian Builders located?</strong><br>
+    A: We are based in Payyannur, Kannur district, Kerala.</p>
+
+    <p><strong>Q: What services do you offer?</strong><br>
+    A: We provide architectural designing, civil construction, renovation, and plot development.</p>
+
+    <p><strong>Q: How can I contact Meridian Builders?</strong><br>
+    A: You can reach us via WhatsApp using the contact button or call us directly at +91 9400118786.</p>
+
+    <p><strong>Q: Do you offer custom home designs?</strong><br>
+    A: Yes! We specialize in crafting personalized and modern home designs tailored to your needs.</p>
+  </div>
+</section>
+
+
+
 
 <footer>
   <p>&copy; 2025 Meridian Builders & Architectural Designers. All Rights Reserved.</p>
